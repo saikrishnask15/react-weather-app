@@ -1,0 +1,83 @@
+@media screen and (max-width : 570px) {
+    .weather-ctn{
+        height: 100vh;
+        width: 100vw;  
+    }
+}
+.weather-ctn{
+    padding: 40px;
+    border-radius:10px;
+    background-image: linear-gradient(45deg, #384880, #a380f0);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.serach-ctn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;   
+
+}
+.serach-ctn input{
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    color: #626262;
+    background:#ebfffc;
+    font-size: 18px;
+}
+
+.serach-ctn img{
+    width: 38px;
+    cursor: pointer;
+    background: #ebfffc;
+    padding: 12px;
+    border-radius: 30px;
+}
+.serach-ctn img:hover{
+    background:#b79bf3;
+}
+.weather-symbol-ctn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.weather-symbol-ctn img{
+    max-height: 150px;  
+    margin: 24px 0;
+
+}
+.tempearture{
+    font-size: 60px;
+    color: #ffff;
+
+}
+.location{
+    color: #ffff;
+    font-size: 30px;
+}
+.weather-data{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    color: #ffff;
+}
+.weather-data .col{
+    display: flex;
+    align-items: flex-start;
+    gap:12px;
+    font-size:12px;
+}
+.col svg{
+    height: 26px;
+    fill:#fff;
+}
+.col p{
+    font-size: 20px;
+}
