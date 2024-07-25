@@ -122,47 +122,51 @@ const Weather = () => {
 
   return (
     <div className="container" style={{ backgroundImage }}>
-    <div class="weather-app" >
-      <div class="search-ctn">
-        <input
-          ref={inputRef}
-          type="text"
-          placeholder="Enter City"
-          value={locationValue}
-          onChange={handleChange}
-          onKeyDown={handleKeyDown}
-        />
-        <i
-          class="fa fa-search"
-          onClick={() => search(inputRef.current.value)}
-        ></i>
-      </div>
-      <div class="weather">
-        <img src={weatherData.icon} alt="" />
-        <div class="weather-type">{weatherData.weatherType}</div>
-        <div class="tempeature">{weatherData.temperature}°c</div>
-        <div className="location">
-          {weatherData.location}, {weatherData.country}
+      <div class="weather-app">
+        <div class="search-ctn">
+          <input
+            ref={inputRef}
+            type="text"
+            placeholder="Enter City"
+            value={locationValue}
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
+          />
+          <i
+            class="fa fa-search"
+            onClick={() => search(inputRef.current.value)}
+          ></i>
+        </div>
+        <div class="weather">
+          <img src={weatherData.icon} alt="" />
+          <div class="weather-type">{weatherData.weatherType}</div>
+          <div class="tempeature">{weatherData.temperature}°c</div>
+          <div className="location">
+            {weatherData.location}, {weatherData.country}
+          </div>
+        </div>
+        <div class="weather-date">
+          <p>
+            {day}, {date} {month}
+          </p>
+        </div>
+        <div class="weather-data">
+          <div class="humidity">
+            <i class="fa-solid fa-droplet"></i>
+            <div>
+              <div class="data">{weatherData.humidity}%</div>
+              <div class="data-name">humidity</div>
+            </div>
+          </div>
+          <div class="wind">
+            <i class="fa-solid fa-wind"></i>
+            <div>
+              <div class="data">{weatherData.windSpeed}km/h</div>
+              <div class="data-name">wind</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="weather-date">
-        <p>
-          {day}, {date} {month}
-        </p>
-      </div>
-      <div class="weather-data">
-        <div class="humidity">
-          <div class="data-name">humidity</div>
-          <i class="fa-solid fa-droplet"></i>
-          <div class="data">{weatherData.humidity}%</div>
-        </div>
-        <div class="wind">
-          <div class="data-name">wind</div>
-          <i class="fa-solid fa-wind"></i>
-          <div class="data">{weatherData.windSpeed}km/h</div>
-        </div>
-      </div>
-    </div>
     </div>
   );
 };
